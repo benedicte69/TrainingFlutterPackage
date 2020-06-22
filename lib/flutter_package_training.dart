@@ -1,7 +1,10 @@
 library flutter_package_training;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 10;
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'dart:io';
+
+class IosAndroid {
+  static bool isIOS()=>(Platform.isIOS);
+
 }
