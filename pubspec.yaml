@@ -1,8 +1,8 @@
 name: flutter_package_training
 description:  Flutter package training
 version: 0.0.1
-author:
-homepage:
+author: crea-cluster benedicte55555@yahoo.fr
+homepage: https://github.com/benedicte69/TrainingFlutterPackage
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
