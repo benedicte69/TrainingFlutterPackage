@@ -32,20 +32,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-
-        title: Text(widget.title),
-      ),
+    return IosAndroid.scaffold(
+      string: "Test",
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Oups.. that\'s IOS: ${IosAndroid.isIOS()}',
-            ),
-          ],
-        ),
+        child: IosAndroid.text(string: '${IosAndroid.isIOS()}', color: Colors.pink),
       ),
     );
   }
