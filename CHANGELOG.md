@@ -2,7 +2,6 @@
 
 * adding dart doc comments
 
-
 ## [0.0.1] - 2020-06-22
 
 * initializing the package
