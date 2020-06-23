@@ -10,7 +10,7 @@ add to your `pubspec.yaml`:
 
 ```yalm
 dependencies:
-  flutter_package_training: ^1.0.0
+  flutter_package_training: ^1.0.1
 ```
 
 ## Usage
