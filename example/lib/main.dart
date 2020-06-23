@@ -35,20 +35,24 @@ class _MyHomePageState extends State<MyHomePage> {
     return IosAndroid.scaffold(
       string: "Test",
       body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          IosAndroid.text(string: '${IosAndroid.isIOS()}', color: Colors.pink),
-          RaisedButton(
-            child: IosAndroid.text(
-              string: 'press me',
-            ),
-            onPressed: () {
-              IosAndroid.alert(context: context);
-            },
-          )
-        ],
-      )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            IosAndroid.text(
+                string: '${IosAndroid.isIOS()}', color: Colors.pink),
+            IosAndroid.button(
+                child: IosAndroid.text(string: 'error'),
+                onPressed: () {
+                  IosAndroid.alert(
+                      context: context,
+                      callback: () {
+                        print('success');
+                        Navigator.of(context).pop();
+                      });
+                })
+          ],
+        ),
+      ),
     );
   }
 }

@@ -22,14 +22,20 @@ class IosAndroid {
         : androidText(string, style, align);
   }
 
-  static Future alert({@required BuildContext context}) {
+  static Future alert({@required BuildContext context, @required VoidCallback callback}) {
     return showDialog(
         context: context,
         builder: (context) {
           return isIOS()
-              ? iosErrorAlert(context: context)
-              : androidErrorAlert(context: context);
+              ? iosErrorAlert(context: context, onPressed: callback)
+              : androidErrorAlert(context: context, onPressed: callback);
         });
+  }
+
+  static button({@required Widget child, @required VoidCallback onPressed}) {
+    return (isIOS())
+        ? iosButton(child: child, onPressed: onPressed)
+        : androidRaisedButton(child: child, onPressed: onPressed);
   }
 
 // Android Material
@@ -49,7 +55,7 @@ class IosAndroid {
     );
   }
 
-  static androidErrorAlert({@required BuildContext context}) {
+  static androidErrorAlert({@required BuildContext context,@required VoidCallback onPressed}) {
     return AlertDialog(
       content: Column(
         mainAxisSize: MainAxisSize.min,
@@ -58,12 +64,16 @@ class IosAndroid {
         ],
       ),
       actions: <Widget>[
-        RaisedButton(
-            child: text(string: 'ok'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            }),
+       button(child: text(string: 'ok'), onPressed: onPressed),
       ],
+    );
+  }
+
+  static RaisedButton androidRaisedButton(
+      {@required Widget child, @required VoidCallback onPressed}) {
+    return RaisedButton(
+      onPressed: onPressed,
+      child: child,
     );
   }
 
@@ -87,18 +97,22 @@ class IosAndroid {
     );
   }
 
-  static iosErrorAlert({@required BuildContext context}) {
+  static iosErrorAlert({@required BuildContext context, @required VoidCallback onPressed}) {
     return CupertinoAlertDialog(
       content: Column(
         children: <Widget>[text(string: 'error')],
       ),
       actions: <Widget>[
-        CupertinoButton(
-            child: text(string: 'ok'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            })
+  button(child: text(string: 'ok'), onPressed: onPressed),
       ],
+    );
+  }
+
+  static CupertinoButton iosButton(
+      {@required Widget child, @required VoidCallback onPressed}) {
+    return CupertinoButton(
+      child: child,
+      onPressed: onPressed,
     );
   }
 
