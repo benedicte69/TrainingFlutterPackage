@@ -1,4 +1,8 @@
-## [1.0.0] - 2020-06-23
+## [1.0.2] - 2020-06-23
+
+* adding more detail to the description field of pubspec.yaml
+
+## [1.0.1] - 2020-06-23
 
 * adding getting start readme correct version
 

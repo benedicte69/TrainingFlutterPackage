@@ -1,7 +1,7 @@
 # flutter package training
 
-This a training to learn how to conceive a package
-[Flutter](https://flutter.dev)
+This is a training to learn how to conceive a package
+[Flutter](https://flutter.dev) 
 
 
 ## Getting Started
@@ -10,7 +10,7 @@ add to your `pubspec.yaml`:
 
 ```yalm
 dependencies:
-  flutter_package_training: ^1.0.1
+  flutter_package_training: ^1.0.2
 ```
 
 ## Usage
