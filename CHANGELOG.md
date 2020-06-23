@@ -1,3 +1,7 @@
+## [1.0.4] - 2020-06-23
+
+* adding pedantic and effective analysis_options.yalm
+
 ## [1.0.3] - 2020-06-23
 
 * reducing to 60 or less than 180 characters the description field of pubspec.yaml

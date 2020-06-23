@@ -1,7 +1,7 @@
 name: flutter_package_training
 description:  Flutter package training,
   the goal is to understand and demystify the use and creation of packages.
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/benedicte69/TrainingFlutterPackage
 
 environment:
