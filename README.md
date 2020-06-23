@@ -18,5 +18,5 @@ dependencies:
 import the package in your dart file
 
 ```dart
-import 'package:flutter_package_training.flutter_package_training.dart';
+import 'package:flutter_package_training/flutter_package_training.dart';
 ```
