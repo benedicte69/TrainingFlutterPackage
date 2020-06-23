@@ -2,3 +2,7 @@
 
 * initializing a package
 * learning how to create a package
+* Scaffold
+* Text
+* Alert
+* Button
