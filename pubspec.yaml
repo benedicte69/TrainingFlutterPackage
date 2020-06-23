@@ -1,14 +1,7 @@
 name: flutter_package_training
 description:  Flutter package training,
   the goal is to understand and demystify the use and creation of packages.
-  It is a training on their design, their usefulness and their maintenance.
-  As any beginner I am confused by the number of packages in the dev pub,
-  I am surprised to find sometimes that their purpose is only the reuse of Dart's class code.
-  Sometimes even very often I would prefer to understand and master the documentation of the
-  flutter API classes rather than downloading packages which are just repetition and an
-  overlay of jargon.
-
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/benedicte69/TrainingFlutterPackage
 
 environment:
