@@ -5,8 +5,8 @@ void main() {
   runApp(MyApp());
 }
 
+/// Set the widget which is the root of the application.
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,9 +20,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/// Make the app itself a widget
 class MyHomePage extends StatefulWidget {
+  ///Constructor
   MyHomePage({Key key, this.title}) : super(key: key);
 
+  /// Fields in a Widget subclass are always marked "final".
   final String title;
 
   @override
@@ -33,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return IosAndroid.scaffold(
-      string: "Test",
+      string: 'Test',
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

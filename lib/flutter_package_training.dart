@@ -1,12 +1,11 @@
 library flutter_package_training;
 
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'dart:io';
 
+///PLATFORM IOS ANDROID
 class IosAndroid {
-  ///PLATFORM IOS ANDROID
-
   ///platform checking
   static bool isIOS() => (Platform.isIOS);
 
@@ -21,9 +20,13 @@ class IosAndroid {
   }
 
   /// Material design for Text
-  static text(
-      {@required String string, Color color, double size, TextAlign align}) {
-    TextStyle style = textStyle(color, size, align);
+  static text({
+    @required String string,
+    Color color,
+    double size,
+    TextAlign align,
+  }) {
+    var style = textStyle(color, size, align);
     return (isIOS())
         ? iosText(string, style, align)
         : androidText(string, style, align);
